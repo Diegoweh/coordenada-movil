@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import Image from "next/image";
 import React from "react";
 
@@ -44,18 +47,35 @@ export default function WeSection({
       {/* Contenido */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-          <div>
-            <div className=" text-gray-800/90 leading-relaxed">
+          {/* Columna izquierda */}
+          <motion.div
+            className="order-1"
+            initial={{ x: -100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+            viewport={{ once: true }}
+          >
+            <div className="text-gray-800/90 leading-relaxed">
               {leftParagraph}
             </div>
+
             <h2 className="mt-4 text-2xl md:text-3xl font-semibold tracking-tight text-gray-900 drop-shadow-sm">
               {title}
             </h2>
-          </div>
+          </motion.div>
 
-          <div className="text-gray-800/90 leading-relaxed">
-            {rightParagraph}
-          </div>
+          {/* Columna derecha */}
+          <motion.div
+            className="order-2"
+            initial={{ x: 100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+            viewport={{ once: true }}
+          >
+            <div className="text-gray-800/90 leading-relaxed">
+              {rightParagraph}
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>

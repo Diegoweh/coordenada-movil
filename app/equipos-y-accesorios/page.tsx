@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button'
 import { ArrowUpRight } from 'lucide-react'
 import { products } from "@/lib/products"
 import React from 'react'
+import BannerHero from "@/components/BannerHero"
 
 const page = () => {
   const randomIndex = Math.floor(Math.random() * products.length)
@@ -127,6 +128,17 @@ const page = () => {
         </div>
 
       </section>
+
+      <BannerHero
+            backgroundImage="/img/bannerhero.webp"
+            title="Gestiona tu flota con tecnología inteligente"
+            description="Monitoreo en tiempo real, rutas optimizadas y reportes accionables en un solo lugar."
+            ctaLabel="Contáctanos"
+            ctaHref="/contacto"
+            align="left"
+            height="lg"
+            kicker="Soluciones para flotas"
+      />
     </>
   )
 }
