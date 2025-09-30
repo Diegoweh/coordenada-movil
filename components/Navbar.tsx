@@ -14,9 +14,9 @@ import {
 import { Menu } from "lucide-react";
 
 const LINKS = [
-  { href: "/", label: "Servicios" },
-  { href: "/", label: "Equipos y Accesorios" },
-  { href: "/", label: "Monitoreo" },
+  { href: "/#servicios", label: "Servicios" },
+  { href: "/equipos-y-accesorios", label: "Equipos y Accesorios" },
+  { href: "/#monitoreo", label: "Monitoreo" },
 ];
 
 export function Navbar() {

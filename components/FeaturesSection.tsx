@@ -2,12 +2,12 @@ import { MapPin, Smartphone, Shield, Car } from "lucide-react"
 
 export function FeaturesSection() {
   return (
-    <section className="py-16 px-4 max-w-7xl mx-auto">
+    <section id="monitoreo" className="py-16 px-4 max-w-7xl mx-auto">
       <div className="mb-12">
         <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-2">
-          Por qué <span className="text-[#934991]">Coordenada Móvil</span>
+          ¿Por qué <span className="text-[#934991]">Coordenada Móvil</span>
         </h2>
-        <h3 className="text-4xl md:text-5xl font-bold text-foreground">es la mejor opción</h3>
+        <h3 className="text-4xl md:text-5xl font-bold text-foreground">es la mejor opción?</h3>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">

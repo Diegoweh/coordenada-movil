@@ -22,7 +22,7 @@ export default function Home() {
     <WeSection
         title="Proporcionamos servicios 
         avanzados de localización 
-        y monitoreo."
+        y monitoreo"
       leftParagraph={
         <p>
           NOSOTROS
