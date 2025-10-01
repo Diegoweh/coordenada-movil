@@ -85,7 +85,7 @@ const page = () => {
 
             <div className="mt-7 flex items-center gap-4">
               <span className="text-lg font-medium">{product.price}</span>
-              <Link href={`/equipos/${product.slug}`}>
+              <Link href={`/equipos-y-accesorios/${product.slug}`}>
                 <Button className="bg-[#934991] hover:bg-purple-900 text-white">
                   Ver detalles
                   <ArrowUpRight className="ml-2 h-4 w-4" />
