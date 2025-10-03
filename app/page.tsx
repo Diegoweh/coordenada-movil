@@ -26,7 +26,7 @@ export default function Home() {
       leftParagraph={
         <p>
           NOSOTROS
-        </p>
+        </p> 
       }
       rightParagraph={
         <p>
@@ -47,7 +47,7 @@ export default function Home() {
       title="Gestiona tu flota con tecnología inteligente"
       description="Monitoreo en tiempo real, rutas optimizadas y reportes accionables en un solo lugar."
       ctaLabel="Contáctanos"
-      ctaHref="/contacto"
+      ctaHref="https://wa.me/526699202328?text=Hola,%20quiero%20más%20información%20sobre%20sus%20servicios%20"      
       align="left"
       height="lg"
       kicker="Soluciones para flotas"

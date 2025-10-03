@@ -16,7 +16,12 @@ import { Menu } from "lucide-react";
 const LINKS = [
   { href: "/#servicios", label: "Servicios" },
   { href: "/equipos-y-accesorios", label: "Equipos y Accesorios" },
-  { href: "/#monitoreo", label: "Monitoreo" },
+  { 
+    href: "https://monitoreo.coordenadamovil.com/", 
+    label: "Monitoreo", 
+    target: "_blank", 
+    rel: "noopener noreferrer" 
+  },
 ];
 
 export function Navbar() {
@@ -42,15 +47,27 @@ export function Navbar() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {LINKS.map(({ href, label }) => (
-              <Link
-                key={label}
-                href={href}
-                className="text-white hover:text-[#c450c2] transition-colors duration-200 text-sm font-medium"
-              >
-                {label}
-              </Link>
-            ))}
+            {LINKS.map(({ href, label }) =>
+              href.startsWith("http") ? (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white hover:text-[#c450c2] transition-colors duration-200 text-sm font-medium"
+                >
+                  {label}
+                </a>
+              ) : (
+                <Link
+                  key={label}
+                  href={href}
+                  className="text-white hover:text-[#c450c2] transition-colors duration-200 text-sm font-medium"
+                >
+                  {label}
+                </Link>
+              )
+            )}
 
             <Button
               asChild
@@ -58,9 +75,10 @@ export function Navbar() {
               size="sm"
               className="ml-4 border-gray-500 bg-transparent hover:bg-[#934991] text-white hover:text-white"
             >
-              <Link href="/contacto">Contacto</Link>
+              <Link href="/#footer">Contacto</Link>
             </Button>
           </div>
+
 
           {/* Mobile menu (Sheet) */}
           <div className="md:hidden">
@@ -89,16 +107,29 @@ export function Navbar() {
                 </SheetHeader>
 
                 <nav className="mt-6 flex flex-col gap-1">
-                  {LINKS.map(({ href, label }) => (
-                    <SheetClose asChild key={label}>
-                      <Link
-                        href={href}
-                        className="rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-[#934991] hover:text-white focus:outline-none focus:ring-2 focus:ring-white/20"
-                      >
-                        {label}
-                      </Link>
-                    </SheetClose>
-                  ))}
+                  {LINKS.map(({ href, label }) =>
+                    href.startsWith("http") ? (
+                      <SheetClose asChild key={label}>
+                        <a
+                          href={href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-[#934991] hover:text-white focus:outline-none focus:ring-2 focus:ring-white/20"
+                        >
+                          {label}
+                        </a>
+                      </SheetClose>
+                    ) : (
+                      <SheetClose asChild key={label}>
+                        <Link
+                          href={href}
+                          className="rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-[#934991] hover:text-white focus:outline-none focus:ring-2 focus:ring-white/20"
+                        >
+                          {label}
+                        </Link>
+                      </SheetClose>
+                    )
+                  )}
 
                   <SheetClose asChild>
                     <Button
@@ -107,7 +138,7 @@ export function Navbar() {
                       size="sm"
                       className="mt-3 mx-2 border-gray-500 bg-transparent hover:bg-[#934991] text-white hover:text-white"
                     >
-                      <Link href="/contacto">Contacto</Link>
+                      <Link href="/#footer">Contacto</Link>
                     </Button>
                   </SheetClose>
                 </nav>

@@ -35,10 +35,10 @@ const page = () => {
         </div>
 
         <div className="mt-6 flex justify-end">
-          <Button className="bg-[#934991] hover:bg-purple-900 text-white px-6 py-5 rounded-lg font-medium flex items-center gap-2">
+          <a href="https://wa.me/526699202328?text=Hola,%20quiero%20más%20información%20sobre%20sus%20servicios%20" target="_blank" className="bg-[#934991] hover:bg-purple-900 text-white px-6 py-5 rounded-lg font-medium flex items-center gap-2">
             Contáctanos
             <ArrowUpRight className="w-4 h-4" />
-          </Button>
+          </a>
         </div>
       </div>
 
@@ -134,7 +134,7 @@ const page = () => {
             title="Gestiona tu flota con tecnología inteligente"
             description="Monitoreo en tiempo real, rutas optimizadas y reportes accionables en un solo lugar."
             ctaLabel="Contáctanos"
-            ctaHref="/contacto"
+            ctaHref="https://wa.me/526699202328?text=Hola,%20quiero%20más%20información%20sobre%20sus%20servicios%20"      
             align="left"
             height="lg"
             kicker="Soluciones para flotas"

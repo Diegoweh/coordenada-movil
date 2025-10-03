@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export function Footer() {
   return (
-    <footer className="bg-gray-950 mt-16 text-white">
+    <footer id="footer" className="bg-gray-950 mt-16 text-white">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Logo Section */}
@@ -39,9 +39,15 @@ export function Footer() {
             <ul className="space-y-3">
               <li>
                 <p className="text-sm text-gray-400">Consultor</p>
-                <a href="tel:+526699202328" className="text-white hover:text-[#934991] transition-colors">
-                  (669) 920 2328
+                <a
+                  href="https://wa.me/526699202328"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white hover:text-[#934991] transition-colors"
+                >
+                  WhatsApp: (669) 920 2328
                 </a>
+
               </li>
               <li>
                 <p className="text-sm text-gray-400">Administración</p>
